@@ -149,24 +149,18 @@ if __name__ == '__main__':
         action = input("\n请选择操作：\n0. 自动化登录\n1. 手动登录\n2. 切换账号\n3. 注销登陆\n4. 当前账户信息\n5. 退出系统\n请输入选项：")
         if action == '0':
             main()
-            print("ヽ(•‿•)ノ  by24级工学院徐志豪")
             break
         elif action == '1':
             main()
-            print("ヽ(•‿•)ノ  by24级工学院徐志豪")
         elif action == '2':
             USERNAME, PASSWORD = switch_account(prompt_new=True)
             print(f'成功切换{USERNAME}账号')
-            print("ヽ(•‿•)ノ  by24级工学院徐志豪")
         elif action == '3':
             logout()
-            print("ヽ(•‿•)ノ  by24级工学院徐志豪")
         elif action == '4':
             print_account()
-            print("ヽ(•‿•)ノ  by24级工学院徐志豪")
         elif action == '5':
             print("成功退出程序")
-            print("ヽ(•‿•)ノ  by24级工学院徐志豪")
             break
         else:
             print("[×] 无效的选项，请重新选择")
