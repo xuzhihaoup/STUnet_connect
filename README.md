@@ -64,7 +64,7 @@
 
 ## 📁 项目结构
 
-STUnet_connect/
+STUnet_connect/  
 ├── hand_connect.exe         # 手动模式主程序  
 ├── auto_connect.exe         # 自动模式主程序  
 ├── credentials.json         # 账户信息（登录自动生成）  
