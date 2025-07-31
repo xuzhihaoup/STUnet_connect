@@ -33,7 +33,7 @@ def switch_account(prompt_new=False):
     if not prompt_new:
         username, password = load_credentials()
         if username and password:
-            print(f"\n[✓] 使用上次登录账号：{username}")
+            print(f"\n 使用上次登录账号：{username}")
             return username, password
 
     print("\n请输入校园网账号和密码")
@@ -76,11 +76,11 @@ def login():
     r.encoding = 'utf-8'  # 显式指定编码
     # print(r)
     if 'login_ok' in r.text or r.status_code == 200:
-        print("[✓] 登录成功，正在保存 cookie...")
+        print(" 登录成功，正在保存 cookie...")
         save_cookies(session, COOKIE_FILE)
         return session
     else:
-        print("[×] 登录失败")
+        print(" 登录失败")
         return None
 
 def get_user_flux(session):
@@ -115,13 +115,13 @@ def logout():
     r = session.post(LOGOUT_URL,data=login_data,headers=headers, verify=False)
     # print(r.text)
     if r.status_code == 200:
-        print("[✓] 注销成功")
+        print(" 注销成功")
     else:
-        print("[×] 注销失败")
+        print(" 注销失败")
 def print_account():
     session = requests.Session()
     flux_info = get_user_flux(session)
-    print("\n[✓] 当前用户流量信息：")
+    print("\n 当前用户流量信息：")
     for k, v in flux_info.items():
         print(f"{k}: {v}")
 def main():
@@ -130,7 +130,7 @@ def main():
     if os.path.exists(COOKIE_FILE):
         load_cookies(session, COOKIE_FILE)
         if not is_logged_in(session):
-            print("[!] Cookie 无效，重新登录...")
+            print(" Cookie 无效，重新登录...")
             session = login()
         else:
             session = login()
@@ -141,10 +141,9 @@ def main():
 
     if session:
         flux_info = get_user_flux(session)
-        print("[✓] 当前用户流量信息：")
+        print(" 当前用户流量信息：")
         for k, v in flux_info.items():
             print(f"{k}: {v}")
 if __name__ == '__main__':
       print("ヽ(•‿•)ノ欢迎使用汕头大学校园网自动连接助手ヽ(•‿•)ノ")
       main()
-      print("⌘•‿•⌘ by24级工学院徐志豪")
