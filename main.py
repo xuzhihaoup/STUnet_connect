@@ -33,7 +33,7 @@ def switch_account(prompt_new=False):
     if not prompt_new:
         username, password = load_credentials()
         if username and password:
-            print(f"\n[✓] 使用上次登录账号：{username}")
+            print(f"\n 使用上次登录账号：{username}")
             return username, password
 
     print("\n请输入校园网账号和密码")
@@ -76,11 +76,11 @@ def login():
     r.encoding = 'utf-8'  # 显式指定编码
     # print(r)
     if 'login_ok' in r.text or r.status_code == 200:
-        print("[✓] 登录成功，正在保存 cookie...")
+        print(" 登录成功，正在保存 cookie...")
         save_cookies(session, COOKIE_FILE)
         return session
     else:
-        print("[×] 登录失败")
+        print(" 登录失败")
         return None
 
 def get_user_flux(session):
@@ -114,9 +114,9 @@ def logout():
     }
     r = session.post(LOGOUT_URL,data=login_data,headers=headers, verify=False)
     if r.status_code == 200:
-        print("[✓] 注销成功")
+        print(" 注销成功")
     else:
-        print("[×] 注销失败")
+        print(" 注销失败")
 def print_account():
     session = requests.Session()
     flux_info = get_user_flux(session)
@@ -129,7 +129,7 @@ def main():
     if os.path.exists(COOKIE_FILE):
         load_cookies(session, COOKIE_FILE)
         if not is_logged_in(session):
-            print("[!] Cookie 无效，重新登录...")
+            print(" Cookie 无效，重新登录...")
             session = login()
         else:
             session = login()
@@ -163,4 +163,4 @@ if __name__ == '__main__':
             print("成功退出程序")
             break
         else:
-            print("[×] 无效的选项，请重新选择")
+            print(" 无效选项，请重新选择")
