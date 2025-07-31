@@ -38,18 +38,20 @@
 
 专为无人值守的远程电脑设计：
 
-1. **首次运行**时需手动输入账号信息，或复制 `hand_connect.exe` 目录下的账户配置文件( `cookies.pkl` 与'credentials.json')。
-2. 配合 Windows **任务计划程序** 设置自动登录时间（如：每天凌晨 4 点），也可设置每小时重复认证，**防止因校园网强制下线而断网**。
+Step-1. **首次运行**时需手动输入账号信息，或复制 `hand_connect.exe` 目录下运行生成的账户配置文件( `cookies.pkl` 与'credentials.json')。
+Step-2. 配合 Windows **任务计划程序** 设置自动登录时间（如：每天凌晨 4 点），也可设置每小时重复认证，**防止因校园网强制下线而断网**。
 
 ---
 
 ## 🧩 使用建议
 
-- **日常使用**建议使用 `hand_connect.exe` 完成账号配置。
-- **远程使用**建议启用 `auto_connect.exe` 并搭配定时任务，确保稳定在线。
-- 所有配置文件保存在本地，**无需同步或上传**，他人无需使用你的 cookies 文件。
-- 当 `hand_connect.exe` 提示cookies无效或者过期，用户无需担心，重新登录时会自动更新。
-- 'credentials.json'与'cookies.pkl'请保持与exe文件(hand_connect.exe/auto_connect.exe)在同一文件夹目录下。
+- **hand_connect**该软件可以创建快捷方式放置在桌面，替代之前使用校园网要去浏览器的环节，该软件可以作为远程时切换账户使用，切勿使用浏览器切换账号，会使远程断联。  
+- **auto_connect**该软件并搭配定时任务，确保远程稳定在线。同时省去每天认证校园网的麻烦。  
+- 所有配置文件保存在本地，**无需同步或上传**，他人无需使用你的 cookies 文件。  
+- 当 `hand_connect.exe` 提示cookies无效或者过期，用户无需担心，重新登录时会自动更新。  
+- 'credentials.json'与'cookies.pkl'请保持与exe文件(hand_connect.exe/auto_connect.exe)在同一文件夹目录下。  
+- 该项目仅作为省去需要人为每天去浏览器认证的过程，以及远程时无人认证的困扰。并不是校园网VPN。需要电脑放置在学校。  
+- 当软件运行闪退时，请检查是否连接STU校园网。  
 
 ---
 
