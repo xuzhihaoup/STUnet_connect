@@ -38,6 +38,7 @@
 专为无人值守的远程电脑设计：  
 
 Step-1. **首次运行**时需手动输入账号信息，或复制 `hand_connect.exe` 目录下运行生成的账户配置文件( `cookies.pkl` 与'credentials.json')。  
+![任务计划程序](https://github.com/xuzhihaoup/STUnet_connect/blob/main/image/文件目录.png)
 Step-2. 配合 Windows **任务计划程序** 设置自动登录时间（如：每天凌晨 4 点），也可设置每小时重复认证，**防止因校园网强制下线而断网**。  
 
 ![任务计划程序](https://github.com/xuzhihaoup/STUnet_connect/blob/main/image/step2.png)
