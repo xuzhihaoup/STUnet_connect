@@ -49,7 +49,8 @@
 ![任务计划程序](https://github.com/xuzhihaoup/STUnet_connect/blob/main/image/step2.png)
 ![自动值守](https://github.com/xuzhihaoup/STUnet_connect/blob/main/image/自动任务.png)
 ---
-
+#### *Step*-3. 
+**测试是否部署成功** 请使用hand_connect.exe程序 --> 1. 手动登录 --> 3. 注销登录 --> 打开浏览器随便打开一个网页检查是否网络已经无法使用 若无法使用则成功注销反之继续注销 --> 使用刚刚部署在**任务计划程序**中的任务右键选择运行 -->  打开浏览器随便打开一个网页检查网络能够正常使用则部署成功
 ## 🧩 使用建议
 
 - **hand_connect**该软件可以创建快捷方式放置在桌面，替代之前使用校园网要去浏览器的环节，该软件可以作为远程时切换账户使用，切勿使用浏览器切换账号，会使远程断联。  
