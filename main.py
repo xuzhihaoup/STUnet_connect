@@ -140,7 +140,7 @@ def main():
 
     if session:
         flux_info = get_user_flux(session)
-        print("[✓] 当前用户流量信息：")
+        print(" 当前用户流量信息：")
         for k, v in flux_info.items():
             print(f"{k}: {v}")
 if __name__ == '__main__':
