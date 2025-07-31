@@ -120,7 +120,7 @@ def logout():
 def print_account():
     session = requests.Session()
     flux_info = get_user_flux(session)
-    print("\n[✓] 当前用户流量信息：")
+    print("\n 当前用户流量信息：")
     for k, v in flux_info.items():
         print(f"{k}: {v}")
 def main():
