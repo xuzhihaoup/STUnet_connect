@@ -29,7 +29,7 @@
 
 📝 初次使用需输入校园网账户信息，程序将自动生成 `cookies` 与配置文件（JSON）并存于当前目录。此后登录可一键完成，无需打开浏览器。
 
-💡 提示：若当前账号流量不足，**避免远程控制中断**，可在本工具中快速切换账号并重新登录。
+💡 提示：若当前账号流量不足，**避免远程控制中断**，可在本工具中快速切换账号并手动登录。
 
 ---
 
@@ -37,10 +37,12 @@
 
 专为无人值守的远程电脑设计：  
 
-*Step*-1. **首次运行**时需手动输入账号信息，或复制 `hand_connect.exe` 目录下运行生成的账户配置文件( `cookies.pkl` 与'credentials.json')。  
+#### *Step*-1. 
+**首次运行**时需手动输入账号信息，或复制 `hand_connect.exe` 目录下运行生成的账户配置文件( `cookies.pkl` 与'credentials.json')。  
 ![任务计划程序](https://github.com/xuzhihaoup/STUnet_connect/blob/main/image/文件目录.png)  
 
-*Step*-2. 配合 Windows **任务计划程序** 设置自动登录时间（如：每天凌晨 4 点），也可设置每小时重复认证，**防止因校园网强制下线而断网**。创建任务时请确保**Step 1**图片中显示的文件结构。
+#### *Step*-2. 
+配合 Windows **任务计划程序** 设置自动登录时间（如：每天凌晨 4 点），也可设置每小时重复认证，**防止因校园网强制下线而断网**。创建任务时请确保**Step 1**图片中显示的文件结构。
 
 ![任务计划程序](https://github.com/xuzhihaoup/STUnet_connect/blob/main/image/step2.png)
 ![自动值守](https://github.com/xuzhihaoup/STUnet_connect/blob/main/image/自动任务.png)
