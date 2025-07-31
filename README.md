@@ -83,4 +83,15 @@ STUnet_connect/
 ├── auto_connect.py          # auto_connect.exe 源代码  
 └── README.md                # 项目说明文档  
 
+## 📁 项目结构
+
+| 文件名              | 说明                        |
+|---------------------|------------------------------|
+| hand_connect.exe    | 手动模式主程序               |
+| auto_connect.exe    | 自动模式主程序               |
+| credentials.json    | 账户信息（登录自动生成）     |
+| cookies.pkl         | 登录会话信息（自动生成）     |
+| main.py             | `hand_connect.exe` 源代码    |
+| auto_connect.py     | `auto_connect.exe` 源代码    |
+| README.md           | 项目说明文档                 |
 
