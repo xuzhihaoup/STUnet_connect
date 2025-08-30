@@ -44,9 +44,9 @@ $ chmod +x hand.connect.sh
 打开终端  
 ```bash
 $ cd #你的auto_connect.sh所在文件夹 如下图示意
-$ crontab -e #进入编辑模式
+$ crontab -e #进入编辑模式 输入完成后 请ctrl+o保存后在ctrl+x退出
 按照下列格式输入你的文件路径注意是绝对路径
-30 6 * * * /home/zhxu/STUnet_connect-main/auto_connect.sh
+30 6 * * * /home/zhxu/STUnet_connect-main/auto_connect.sh  #表示每天的6：30分自动执行
 30 7 * * * /home/zhxu/STUnet_connect-main/auto_connect.sh
 30 8 * * * /home/zhxu/STUnet_connect-main/auto_connect.sh
 0 12 * * * /home/zhxu/STUnet_connect-main/auto_connect.sh
@@ -61,17 +61,26 @@ $ crontab -e #进入编辑模式
 +----------- 分钟 (0 - 59)
 ```
 ![终端](https://github.com/xuzhihaoup/STUnet_connect/blob/main/STUnet_connect_Linux/fig_linux_3.png)  
-
+![cron配置](https://github.com/xuzhihaoup/STUnet_connect/blob/main/STUnet_connect_Linux/fig_linux_4.png) 
 ---
 #### *Step*-3. 
-**测试是否部署成功** 请使用hand_connect.exe程序 --> 1. 手动登录 --> 3. 注销登录 --> 打开浏览器随便打开一个网页检查是否网络已经无法使用 若无法使用则成功注销反之继续注销 --> 使用刚刚部署在**任务计划程序**中的任务右键选择运行 -->  打开浏览器随便打开一个网页检查网络能够正常使用则部署成功
+**测试是否部署成功** 请使用hand_connect.sh脚本 --> 1. 手动登录 --> 3. 注销登录 --> 打开浏览器随便打开一个网页检查是否网络已经无法使用 若无法使用则成功注销反之继续注销 --> 在 **crontab -e** 里面添加每分钟执行一次  
+```
+* * * * * /home/zhxu/STUnet_connect-main/auto_connect.sh  
+```
+-->  等待1分钟，打开浏览器随便打开一个网页检查网络能够正常使用则部署成功
+##### 一些其他命令
+``` bash
+$ crontab -l #打印配置的全部任务
+$ tail -f /var/log/syslog #打印cron运行日志
+```
 ## 🧩 使用建议
 
-- **hand_connect**该软件可以创建快捷方式放置在桌面，替代之前使用校园网要去浏览器的环节，该软件可以作为远程时切换账户使用，切勿使用浏览器切换账号，会使远程断联。  
-- **auto_connect**该软件并搭配定时任务，确保远程稳定在线。同时省去每天认证校园网的麻烦。  
+- **hand_connect**该脚本可以替代之前使用校园网要去浏览器的环节，更重要的是该软件可以作为远程时切换账户使用，切勿使用浏览器切换账号，会使远程断联。  
+- **auto_connect**该脚本并搭配定时任务，确保远程稳定在线。同时省去每天认证校园网的麻烦。  
 - 所有配置文件保存在本地，**无需同步或上传**，他人无需使用你的 cookies 文件。  
 - 当 `hand_connect.exe` 提示cookies无效或者过期，用户无需担心，重新登录时会自动更新。  
-- 'credentials.json'与'cookies.pkl'请保持与exe文件(hand_connect.exe/auto_connect.exe)在同一文件夹目录下。  
+- 'credentials.json'与'cookies.pkl'请保持与exe文件(hand_connect.sh/auto_connect.sh)在同一文件夹目录下。  
 - 该项目仅作为省去需要人为每天去浏览器认证的过程，以及远程时无人认证的困扰。并不是校园网VPN。需要电脑放置在学校。  
 - 当软件运行闪退时，请检查是否连接STU校园网。
 - 如果使用目的是远程连接，建议多配置几个远程软件在后台，向日葵、Todesk等(防止某个远程软件退出，我的远程方案是Todesk(专业版)+向日葵。  
@@ -98,5 +107,7 @@ $ crontab -e #进入编辑模式
 | cookies.pkl         | 账户信息（登录自动生成）     |
 | main.py             | `hand_connect.exe` 源代码    |
 | auto_connect.py     | `auto_connect.exe` 源代码    |
+| auto_connect.sh     | Linux版本     |
+| hand_connect.sh     | Linux版本    |
 | README.md           | 项目说明文档                 |
 
