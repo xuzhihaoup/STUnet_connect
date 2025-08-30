@@ -43,11 +43,25 @@ $ chmod +x hand.connect.sh
 配合 linux **Cron** 设置自动登录时间（如：每天凌晨 4 点），也可设置每小时重复认证(有远程需求时推荐使用，非远程仅省去每天认证流程设置6，7，8.30，12这几个时间段基本可以满足需求)，**防止因校园网强制下线而断网**。创建任务时请确保**Step 1**图片中显示的文件结构。
 打开终端  
 ```bash
-$ cd #你的auto_connect.sh所在文件夹
+$ cd #你的auto_connect.sh所在文件夹 如下图示意
+$ crontab -e #进入编辑模式
+按照下列格式输入你的文件路径注意是绝对路径
+30 6 * * * /home/zhxu/STUnet_connect-main/auto_connect.sh
+30 7 * * * /home/zhxu/STUnet_connect-main/auto_connect.sh
+30 8 * * * /home/zhxu/STUnet_connect-main/auto_connect.sh
+0 12 * * * /home/zhxu/STUnet_connect-main/auto_connect.sh
+命令解释
+* * * * *  command_to_run
+- - - - -
+| | | | |
+| | | | +--- 星期几 (0 - 7) (0和7代表星期天)
+| | | +----- 月份 (1 - 12)
+| | +------- 日期 (1 - 31)
+| +--------- 小时 (0 - 23)
++----------- 分钟 (0 - 59)
 ```
+![终端](https://github.com/xuzhihaoup/STUnet_connect/blob/main/STUnet_connect_Linux/fig_linux_3.png)  
 
-![任务计划程序](https://github.com/xuzhihaoup/STUnet_connect/blob/main/image/step2.png)
-![自动值守](https://github.com/xuzhihaoup/STUnet_connect/blob/main/image/自动任务.png)
 ---
 #### *Step*-3. 
 **测试是否部署成功** 请使用hand_connect.exe程序 --> 1. 手动登录 --> 3. 注销登录 --> 打开浏览器随便打开一个网页检查是否网络已经无法使用 若无法使用则成功注销反之继续注销 --> 使用刚刚部署在**任务计划程序**中的任务右键选择运行 -->  打开浏览器随便打开一个网页检查网络能够正常使用则部署成功
