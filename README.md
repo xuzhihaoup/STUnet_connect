@@ -2,7 +2,7 @@
 
 > 🖥️ 面向远程办公、挂后台实验、校外实习的你，一键连接校园网，从此告别“远程掉线恐惧症”。  
 **💡求点亮Star☆-您的鼓励是我最大的支持-在读期间我将持续维护💡**
-[Ubuntu配置教程](https://github.com/xuzhihaoup/STUnet_connect/blob/main/STUnet_connect_Linux/Readme.md)
+[Ubuntu配置教程](https://github.com/xuzhihaoup/STUnet_connect/blob/main/STUnet_connect_Linux)
 ## ✨ 项目亮点
 
 - ✅ **自动定时认证**：支持通过任务计划程序自动登录，确保校园网随时在线。
