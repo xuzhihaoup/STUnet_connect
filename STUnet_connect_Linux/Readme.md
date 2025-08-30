@@ -37,10 +37,14 @@ $ chmod +x hand.connect.sh
 **首次运行**时需手动输入账号信息，或复制 `hand_connect.sh` 目录下运行生成的账户配置文件( `cookies.pkl` 与'credentials.json')。   
 
 💡 **提示**：请务必确保 **auto_connect.sh||cookies.pkl||credentials.json||auto_connect.py** 这四个文件在一个目录下。  
-![任务计划程序](https://github.com/xuzhihaoup/STUnet_connect/blob/main/image/文件目录.png)  
+![文件结构](https://github.com/xuzhihaoup/STUnet_connect/blob/main/STUnet_connect_Linux/fig_linux_2.png)  
 
 #### *Step*-2. 
-配合 Windows **任务计划程序** 设置自动登录时间（如：每天凌晨 4 点），也可设置每小时重复认证(有远程需求时推荐使用，非远程仅省去每天认证流程设置6，7，8.30，12这几个时间段基本可以满足需求)，**防止因校园网强制下线而断网**。创建任务时请确保**Step 1**图片中显示的文件结构。
+配合 linux **Cron** 设置自动登录时间（如：每天凌晨 4 点），也可设置每小时重复认证(有远程需求时推荐使用，非远程仅省去每天认证流程设置6，7，8.30，12这几个时间段基本可以满足需求)，**防止因校园网强制下线而断网**。创建任务时请确保**Step 1**图片中显示的文件结构。
+打开终端  
+```bash
+$ cd #你的auto_connect.sh所在文件夹
+```
 
 ![任务计划程序](https://github.com/xuzhihaoup/STUnet_connect/blob/main/image/step2.png)
 ![自动值守](https://github.com/xuzhihaoup/STUnet_connect/blob/main/image/自动任务.png)
