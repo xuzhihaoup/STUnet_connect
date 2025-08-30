@@ -81,7 +81,8 @@ $ tail -f /var/log/syslog #打印cron运行日志
 - **hand_connect**该脚本可以替代之前使用校园网要去浏览器的环节，更重要的是该软件可以作为远程时切换账户使用，切勿使用浏览器切换账号，会使远程断联。  
 - **auto_connect**该脚本并搭配定时任务，确保远程稳定在线。同时省去每天认证校园网的麻烦。  
 - 所有配置文件保存在本地，**无需同步或上传**，他人无需使用你的 cookies 文件。  
-- 当 `hand_connect.exe` 提示cookies无效或者过期，用户无需担心，重新登录时会自动更新。  
+- 当 `hand_connect.sh` 提示cookies无效或者过期，用户无需担心，重新登录时会自动更新。
+- 当 `hand_connect.sh` 无法加载用户剩余流量信息，正常现象。属于bug--好像跟浏览器有关
 - 'credentials.json'与'cookies.pkl'请保持与exe文件(hand_connect.sh/auto_connect.sh)在同一文件夹目录下。  
 - 该项目仅作为省去需要人为每天去浏览器认证的过程，以及远程时无人认证的困扰。并不是校园网VPN。需要电脑放置在学校。  
 - 当软件运行闪退时，请检查是否连接STU校园网。
