@@ -12,7 +12,14 @@
 
 ## 📦 软件介绍
 
-### 🖱️ `hand_connect.exe` · 手动模式
+### 🖱️ `hand_connect.sh` · 手动模式
+#### *Step*-1.   
+将**hand.connect.sh**与下载的**main.py**文件放置在同一文件夹  
+#### *Step*-2.  **（可选）**
+如提示权限不足，添加权限  
+```bash
+$ chmod +x hand.connect.sh
+```
 
 交互式操作界面，支持以下功能：  
 ヽ(•‿•)ノ 汕头大学校园网自动连接助手ヽ(•‿•)ノ  
