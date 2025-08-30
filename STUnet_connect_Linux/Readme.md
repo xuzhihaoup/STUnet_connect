@@ -1,4 +1,4 @@
-# 🚀 STUnet Connect · 汕头大学校园网自动认证助手
+# 🚀 STUnet Connect · 汕头大学校园网自动认证助手---Linux![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=flat&logo=ubuntu&logoColor=white)
 
 > 🖥️ 面向远程办公、挂后台实验、校外实习的你，一键连接校园网，从此告别“远程掉线恐惧症”。  
 **💡求点亮Star☆-您的鼓励是我最大的支持-在读期间我将持续维护💡**  
