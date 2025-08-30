@@ -1,8 +1,8 @@
 # 🚀 STUnet Connect · 汕头大学校园网自动认证助手---Linux[![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=flat&logo=ubuntu&logoColor=white)](https://github.com/xuzhihaoup/STUnet_connect/blob/main/STUnet_connect_Linux)
 
 > 🖥️ 面向远程办公、挂后台实验、校外实习的你，一键连接校园网，从此告别“远程掉线恐惧症”。  
-**💡求点亮Star☆-您的鼓励是我最大的支持-在读期间我将持续维护💡** [![Windows](https://github.com/xuzhihaoup/STUnet_connect)](https://img.shields.io/badge/Windows-0078D4?style=flat&logo=windows&logoColor=white)
-视频配置教程[![Bilibili](https://img.shields.io/badge/Bilibili-E95420?style=flat&logo=bilibili&logoColor=white)](https://www.bilibili.com/video/BV1EwhvzoEis/?vd_source=14c6392964a3f4218c6147d1ed82bcbc)
+**💡求点亮Star☆-您的鼓励是我最大的支持-在读期间我将持续维护💡** [![Windows](https://img.shields.io/badge/Windows-0078D4?style=flat&logo=windows&logoColor=white)](https://github.com/xuzhihaoup/STUnet_connect)
+[![Bilibili](https://img.shields.io/badge/Bilibili-white?style=flat&logo=bilibili&logoColor=0077B5)](https://www.bilibili.com/video/BV1EwhvzoEis/?vd_source=14c6392964a3f4218c6147d1ed82bcbc)
 ## ✨ 项目亮点
 
 - ✅ **自动定时认证**：支持通过任务计划程序自动登录，确保校园网随时在线。
