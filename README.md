@@ -1,7 +1,8 @@
 # 🚀 STUnet Connect · 汕头大学校园网自动认证助手---Windows![Windows](https://img.shields.io/badge/Windows-0078D4?style=flat&logo=windows&logoColor=white)
 
 > 🖥️ 面向远程办公、挂后台实验、校外实习的你，一键连接校园网，从此告别“远程掉线恐惧症”。  
-**💡求点亮Star☆-您的鼓励是我最大的支持-在读期间我将持续维护💡**  
+**💡求点亮Star☆-您的鼓励是我最大的支持-在读期间我将持续维护💡**
+[Isaac Sim 多无人机配置教程](https://github.com/xuzhihaoup/install_nvidia_driver/blob/main/__Isaacsim_%E5%A4%9A%E6%97%A0%E4%BA%BA%E6%9C%BA%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B__.md)
 ## ✨ 项目亮点
 
 - ✅ **自动定时认证**：支持通过任务计划程序自动登录，确保校园网随时在线。
