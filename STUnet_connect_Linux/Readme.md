@@ -99,16 +99,13 @@ $ tail -f /var/log/syslog #打印cron运行日志
 ---
 
 ## 📁 项目结构
-
 | 文件名              | 说明                        |
 |---------------------|------------------------------|
-| hand_connect.exe    | 手动模式主程序               |
-| auto_connect.exe    | 自动模式主程序               |
 | credentials.json    | 账户信息（登录自动生成）     |
 | cookies.pkl         | 账户信息（登录自动生成）     |
-| main.py             | `hand_connect.exe` 源代码    |
-| auto_connect.py     | `auto_connect.exe` 源代码    |
-| auto_connect.sh     | Linux版本     |
-| hand_connect.sh     | Linux版本    |
+| main.py             | `hand_connect` 源代码    |
+| auto_connect.py     | `auto_connect` 源代码    |
+| auto_connect.sh     | Linux运行脚本     |
+| hand_connect.sh     | Linux运行脚本    |
 | README.md           | 项目说明文档                 |
 
