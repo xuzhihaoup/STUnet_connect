@@ -38,7 +38,7 @@ $ chmod +x hand.connect.sh
 #### *Step*-1. 
 **首次运行**时需手动输入账号信息，或复制 `hand_connect.sh` 目录下运行生成的账户配置文件( `cookies.pkl` 与`credentials.json`)。   
 
-💡 **提示**：请务必确保 **auto_connect.sh||cookies.pkl||credentials.json||auto_connect.py** 这四个文件在一个目录下。  
+💡 **提示**：请务必确保 **`auto_connect.sh`||`cookies.pkl`||`credentials.json`||`auto_connect.py`** 这四个文件在一个目录下。  
 ![文件结构](https://github.com/xuzhihaoup/STUnet_connect/blob/main/STUnet_connect_Linux/fig_linux_2.png)  
 🚨 **重点**：请务必确保 **auto_connect.sh文件中红框的路径修改为你自己文件下载的路径**  
 ![路径修改](https://github.com/xuzhihaoup/STUnet_connect/blob/main/STUnet_connect_Linux/fig_linux_5.png)  
