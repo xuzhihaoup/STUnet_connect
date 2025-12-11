@@ -25,7 +25,7 @@ $ chmod +x hand.connect.sh
 ![运行界面](https://github.com/xuzhihaoup/STUnet_connect/blob/main/STUnet_connect_Linux/fig_linux_1.png) 
 
 
-📝 初次使用请选择 **[1]** 需输入校园网账户信息，程序将自动生成 `cookies` 与配置文件（JSON）并存于当前目录。此后登录可一键完成，无需打开浏览器。部分浏览器无法返回账户剩余流量信息  
+📝 初次使用请选择 **[1]** 需输入校园网账户信息，程序将自动生成 `cookies` 与配置文件`json`并存于当前目录。此后登录可一键完成，无需打开浏览器。部分浏览器无法返回账户剩余流量信息  
 
 💡 提示：若当前账号流量不足，**避免远程控制中断**，可在本工具中快速切换账号并手动登录。
 
@@ -84,7 +84,7 @@ $ tail -f /var/log/syslog #打印cron运行日志
 - 所有配置文件保存在本地，**无需同步或上传**，他人无需使用你的 cookies 文件。  
 - 当 `hand_connect.sh` 提示cookies无效或者过期，用户无需担心，重新登录时会自动更新。
 - 当 `hand_connect.sh` 无法加载用户剩余流量信息，正常现象。属于bug--好像跟浏览器有关
-- 'credentials.json'与'cookies.pkl'请保持与sh\py文件(hand_connect.sh\py/auto_connect.sh\py)在同一文件夹目录下。  
+- `credentials.json`与`cookies.pkl`请保持与sh\py文件(`hand_connect.sh`\`py`/`auto_connect.sh`\`py`)在同一文件夹目录下。  
 - 该项目仅作为省去需要人为每天去浏览器认证的过程，以及远程时无人认证的困扰。并不是校园网VPN。需要电脑放置在学校。  
 - 当软件运行闪退时，请检查是否连接STU校园网。
 - 如果使用目的是远程连接，建议多配置几个远程软件在后台，向日葵、Todesk等(防止某个远程软件退出，我的远程方案是Todesk(专业版)+向日葵。  
