@@ -39,7 +39,7 @@
 #### *Step*-1. 
 **首次运行**时需手动输入账号信息，或复制 `hand_connect.exe` 目录下运行生成的账户配置文件( `cookies.pkl` 与`credentials.json`)。   
 
-💡 **提示**：请务必确保auto_connect.exe||cookies.pkl||credentials.json这三个文件在一个目录下。  
+💡 **提示**：请务必确保`auto_connect.exe` || `cookies.pkl` || `credentials.json`这三个文件在一个目录下。  
 ![任务计划程序](https://github.com/xuzhihaoup/STUnet_connect/blob/main/image/文件目录.png)  
 
 #### *Step*-2. 
