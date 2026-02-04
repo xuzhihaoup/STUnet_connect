@@ -10,7 +10,6 @@
 - 🔐 **本地数据存储**：账户信息与 cookies 全部保存在本地，确保你的隐私与安全。
 - 🧠 **轻量免安装**：无需管理员权限，开箱即用，适合放在远程电脑开机即连。
 - 🦄  **支持多系统**： 本工具提供Windows和Linux两个版本选择。
-- 🎯 **智能路径识别**：脚本自动识别所在目录，无需手动配置绝对路径！
 ---
 
 ## 🚀 快速安装（推荐）
@@ -62,8 +61,7 @@ $ ./hand_connect.sh
 **首次运行**时需手动输入账号信息，或复制 `hand_connect.sh` 目录下运行生成的账户配置文件( `cookies.pkl` 与`credentials.json`)。   
 
 💡 **提示**：请务必确保 **`auto_connect.sh`||`cookies.pkl`||`credentials.json`||`auto_connect.py`** 这四个文件在一个目录下。  
-![文件结构](https://github.com/xuzhihaoup/STUnet_connect/blob/main/STUnet_connect_Linux/fig_linux_2.png)  
-✨ **重大改进**：脚本已优化，**无需手动修改路径**！脚本会自动识别所在目录并执行相应的Python程序。  
+![文件结构](https://github.com/xuzhihaoup/STUnet_connect/blob/main/STUnet_connect_Linux/fig_linux_2.png)    
 #### *Step*-2. 
 配合 Linux **Cron** 设置自动登录时间（如：每天凌晨 4 点），也可设置每小时重复认证(有远程需求时推荐使用，非远程仅需设置认证时间段6，7，8.30，12这几个时间段基本可以满足需求)，**防止因校园网强制下线而断网**。创建任务时请确保**Step 1**图片中显示的文件结构。
 
@@ -83,7 +81,6 @@ $ crontab -e  # 进入编辑模式，输入完成后请 Ctrl+O 保存，然后 C
 0 12 * * * /path/to/your/script/auto_connect.sh  # 每天 12:00 自动执行
 ```
 
-💡 **提示**：脚本已优化，即使在cron中使用绝对路径调用，脚本也会自动定位到正确的目录执行Python程序，无需手动修改脚本内部路径。
 
 命令格式说明：
 ```
