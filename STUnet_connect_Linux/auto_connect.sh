@@ -1,6 +1,9 @@
 #!/bin/bash
 
-# 执行 Python 脚本
-#/home/zhxu/STUnet_connect-main/auto_connect.py   请将此路径修改为你自己的路径
-python3 /home/zhxu/STUnet_connect-main/auto_connect.py #> /dev/null 2>&1 &
+# 自动获取脚本所在目录
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+# 切换到脚本目录并执行 Python 脚本
+cd "$SCRIPT_DIR"
+python3 "$SCRIPT_DIR/auto_connect.py"
+exit $?
