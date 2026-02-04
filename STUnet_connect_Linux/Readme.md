@@ -9,18 +9,41 @@
 - 🛠️ **手动控制中心**：便捷命令界面，支持手动登录、远程切换账号、注销等多种操作。
 - 🔐 **本地数据存储**：账户信息与 cookies 全部保存在本地，确保你的隐私与安全。
 - 🧠 **轻量免安装**：无需管理员权限，开箱即用，适合放在远程电脑开机即连。
-- 🦄  **支持多系统**： 本工具提供Windows和Linux两个版本选择。 
+- 🦄  **支持多系统**： 本工具提供Windows和Linux两个版本选择。
+- 🎯 **智能路径识别**：脚本自动识别所在目录，无需手动配置绝对路径！
+---
+
+## 🚀 快速安装（推荐）
+
+下载所有文件到同一目录后，运行自动安装脚本：
+
+```bash
+$ chmod +x install.sh
+$ ./install.sh
+```
+
+安装脚本会自动完成：
+- ✓ 检查必需文件和依赖
+- ✓ 设置执行权限
+- ✓ 配置定时任务（可选）
+- ✓ 提供详细的后续操作指南
+
 ---
 
 ## 📦 软件介绍
 
 ### 🖱️ `hand_connect.sh` · 手动模式
 #### *Step*-1.   
-将**hand.connect.sh**与下载的**main.py**文件放置在同一文件夹  
+将**hand_connect.sh**与下载的**main.py**文件放置在同一文件夹  
 #### *Step*-2.  **（可选）**
-如提示权限不足，添加权限  
+如提示权限不足，添加执行权限  
 ```bash
-$ chmod +x hand.connect.sh
+$ chmod +x hand_connect.sh
+```
+#### *Step*-3.
+直接运行脚本（无需手动修改路径，脚本会自动识别所在目录）
+```bash
+$ ./hand_connect.sh
 ```
 ![运行界面](https://github.com/xuzhihaoup/STUnet_connect/blob/main/STUnet_connect_Linux/fig_linux_1.png) 
 
@@ -40,20 +63,30 @@ $ chmod +x hand.connect.sh
 
 💡 **提示**：请务必确保 **`auto_connect.sh`||`cookies.pkl`||`credentials.json`||`auto_connect.py`** 这四个文件在一个目录下。  
 ![文件结构](https://github.com/xuzhihaoup/STUnet_connect/blob/main/STUnet_connect_Linux/fig_linux_2.png)  
-🚨 **重点**：请务必确保 **auto_connect.sh文件中红框的路径修改为你自己文件下载的路径**  
-![路径修改](https://github.com/xuzhihaoup/STUnet_connect/blob/main/STUnet_connect_Linux/fig_linux_5.png)  
+✨ **重大改进**：脚本已优化，**无需手动修改路径**！脚本会自动识别所在目录并执行相应的Python程序。  
 #### *Step*-2. 
-配合 linux **Cron** 设置自动登录时间（如：每天凌晨 4 点），也可设置每小时重复认证(有远程需求时推荐使用，非远程仅需设置认证时间段6，7，8.30，12这几个时间段基本可以满足需求)，**防止因校园网强制下线而断网**。创建任务时请确保**Step 1**图片中显示的文件结构。
-打开终端  
+配合 Linux **Cron** 设置自动登录时间（如：每天凌晨 4 点），也可设置每小时重复认证(有远程需求时推荐使用，非远程仅需设置认证时间段6，7，8.30，12这几个时间段基本可以满足需求)，**防止因校园网强制下线而断网**。创建任务时请确保**Step 1**图片中显示的文件结构。
+
+✨ **简化配置**：使用绝对路径配置定时任务  
+打开终端，先进入脚本所在目录，然后配置cron任务  
 ```bash
-$ cd #你的auto_connect.sh所在文件夹 如下图示意
-$ crontab -e #进入编辑模式 输入完成后 请ctrl+o保存后在ctrl+x退出
-按照下列格式输入你的文件路径注意是绝对路径
-30 6 * * * /home/zhxu/STUnet_connect-main/auto_connect.sh  #表示每天的6：30分自动执行
-30 7 * * * /home/zhxu/STUnet_connect-main/auto_connect.sh
-30 8 * * * /home/zhxu/STUnet_connect-main/auto_connect.sh
-0 12 * * * /home/zhxu/STUnet_connect-main/auto_connect.sh
-命令解释
+$ cd /path/to/your/script/directory  # 进入你的脚本目录
+$ pwd  # 显示当前目录的绝对路径，复制这个路径
+$ crontab -e  # 进入编辑模式，输入完成后请 Ctrl+O 保存，然后 Ctrl+X 退出
+```
+
+在crontab中按照下列格式输入（将 `/path/to/your/script` 替换为上面 `pwd` 命令显示的实际路径）：
+```bash
+30 6 * * * /path/to/your/script/auto_connect.sh  # 每天 6:30 自动执行
+30 7 * * * /path/to/your/script/auto_connect.sh  # 每天 7:30 自动执行
+30 8 * * * /path/to/your/script/auto_connect.sh  # 每天 8:30 自动执行
+0 12 * * * /path/to/your/script/auto_connect.sh  # 每天 12:00 自动执行
+```
+
+💡 **提示**：脚本已优化，即使在cron中使用绝对路径调用，脚本也会自动定位到正确的目录执行Python程序，无需手动修改脚本内部路径。
+
+命令格式说明：
+```
 * * * * *  command_to_run
 - - - - -
 | | | | |
@@ -67,11 +100,15 @@ $ crontab -e #进入编辑模式 输入完成后 请ctrl+o保存后在ctrl+x退�
 ![cron配置](https://github.com/xuzhihaoup/STUnet_connect/blob/main/STUnet_connect_Linux/fig_linux_4.png) 
 ---
 #### *Step*-3. 
-**测试是否部署成功** 请使用`hand_connect.sh`脚本 --> 1. 手动登录 --> 3. 注销登录 --> 打开浏览器随便打开一个网页检查是否网络已经无法使用 若无法使用则成功注销反之继续注销 --> 在 **crontab -e** 里面添加每分钟执行一次  
+**测试是否部署成功** 
+1. 使用 `hand_connect.sh` 脚本 → 选择 "1. 手动登录" → 选择 "3. 注销登录" 
+2. 打开浏览器随便打开一个网页，检查网络是否已无法使用（若无法使用则成功注销）
+3. 在 **crontab -e** 里面添加每分钟执行一次进行测试：
+```bash
+* * * * * /path/to/your/script/auto_connect.sh  # 将路径替换为你的实际路径
 ```
-* * * * * /home/zhxu/STUnet_connect-main/auto_connect.sh  
-```
--->  等待1分钟，打开浏览器随便打开一个网页检查网络能够正常使用则部署成功
+4. 等待1分钟，打开浏览器随便打开一个网页，检查网络能否正常使用（若能正常使用则部署成功）
+5. 测试成功后，记得删除测试用的每分钟执行配置，保留正常的定时任务配置
 ##### 一些其他命令
 ``` bash
 $ crontab -l #打印配置的全部任务
@@ -104,11 +141,12 @@ $ tail -f /var/log/syslog #打印cron运行日志
 ## 📁 项目结构
 | 文件名              | 说明                        |
 |---------------------|------------------------------|
+| install.sh          | 自动安装配置脚本（推荐使用） |
+| hand_connect.sh     | Linux手动模式运行脚本       |
+| auto_connect.sh     | Linux自动模式运行脚本       |
+| main.py             | `hand_connect` 源代码       |
+| auto_connect.py     | `auto_connect` 源代码       |
 | credentials.json    | 账户信息（登录自动生成）     |
-| cookies.pkl         | 账户信息（登录自动生成）     |
-| main.py             | `hand_connect` 源代码    |
-| auto_connect.py     | `auto_connect` 源代码    |
-| auto_connect.sh     | Linux运行脚本     |
-| hand_connect.sh     | Linux运行脚本    |
-| README.md           | 项目说明文档                 |
+| cookies.pkl         | 会话信息（登录自动生成）     |
+| README.md           | 项目说明文档                |
 
