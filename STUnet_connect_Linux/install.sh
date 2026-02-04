@@ -144,3 +144,5 @@ echo "管理定时任务："
 echo "  crontab -l  # 查看所有定时任务"
 echo "  crontab -e  # 编辑定时任务"
 echo ""
+
+exit 0

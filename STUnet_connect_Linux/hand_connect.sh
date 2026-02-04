@@ -6,4 +6,4 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # 切换到脚本目录并执行 Python 脚本
 cd "$SCRIPT_DIR"
 python3 "$SCRIPT_DIR/main.py"
-
+exit $?
