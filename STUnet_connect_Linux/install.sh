@@ -71,19 +71,19 @@ echo ""
 read -p "是否立即配置定时任务？(y/n): " -n 1 -r
 echo ""
 
-if [[ $REPLY =~ ^[Yy]$ ]]; then
-    echo ""
-    echo "准备配置定时任务..."
-    echo ""
-    
-    # 生成 crontab 配置
-    CRON_ENTRIES="
+# 生成 crontab 配置（在条件判断之前定义，以便在所有分支中使用）
+CRON_ENTRIES="
 # STUnet Connect 自动认证任务
 30 6 * * * $SCRIPT_DIR/auto_connect.sh
 30 7 * * * $SCRIPT_DIR/auto_connect.sh
 30 8 * * * $SCRIPT_DIR/auto_connect.sh
 0 12 * * * $SCRIPT_DIR/auto_connect.sh
 "
+
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    echo ""
+    echo "准备配置定时任务..."
+    echo ""
     
     # 检查是否已有相同的配置
     if crontab -l 2>/dev/null | grep -q "STUnet Connect"; then
