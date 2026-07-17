@@ -45,7 +45,7 @@
 ![任务计划程序](https://github.com/xuzhihaoup/STUnet_connect/blob/main/image/文件目录.png)  
 
 #### *Step*-2. 
-配合 Windows **任务计划程序** 设置自动登录时间（如：每天凌晨 4 点），也可设置每小时重复认证(有远程需求时推荐使用，非远程仅需设置每天认证时间6，7，8.30，12这几个时间段基本可以满足需求)，**防止因校园网强制下线而断网**。创建任务时请确保**Step 1**图片中显示的文件结构。
+配合 Windows **任务计划程序** 设置自动登录时间（如：每天凌晨 4 点），也可设置每小时重复认证(有远程需求时推荐使用，非远程仅需设置每天认证时间6，7，8.30，12这几个时间段基本可以满足需求。强烈推荐配置一个将触发器设置为系统启动自动连接，就算断电只需要麻烦同学将主机开机就行)，**防止因校园网强制下线而断网**。创建任务时请确保**Step 1**图片中显示的文件结构。
 
 ![任务计划程序](https://github.com/xuzhihaoup/STUnet_connect/blob/main/image/step2.png)
 ![自动值守](https://github.com/xuzhihaoup/STUnet_connect/blob/main/image/自动任务.png)  
